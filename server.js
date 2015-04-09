@@ -20,6 +20,10 @@ http.createServer(app).listen(3000);
 app.post("/", function (req, res){
 	var test = req.body.URL;
 	console.log(test);
+	client.set("key", test);
+	var testing = client.get("key");
+	res.append()
+	res.redirect('/');
 });
 
 console.log("listening on 3000")
